@@ -2,10 +2,10 @@ package com.learner.service.implementation;
 
 import java.util.List;
 
-import com.learner.dao.SubjectDAO;
-import com.learner.dao.implementation.SubjectDaoImplementation;
-import com.learner.model.Subject;
+import com.dao.SubjectDAO;
+import com.dao.implementation.SubjectDaoImplementation;
 import com.learner.service.SubjectService;
+import com.model.Subject;
 
 public class SubjectServiceImplementation implements SubjectService {
 	

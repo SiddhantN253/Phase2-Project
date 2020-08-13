@@ -1,8 +1,8 @@
-package com.learner.dao;
+package com.dao;
 
-import java.util.List;
+import org.hibernate.mapping.List;
 
-import com.learner.model.Student;
+import com.model.Student;
 
 public interface StudentDAO {
 	public Student createStudent(Student student);

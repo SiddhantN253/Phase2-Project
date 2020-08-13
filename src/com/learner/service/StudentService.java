@@ -2,7 +2,7 @@ package com.learner.service;
 
 import java.util.List;
 
-import com.learner.model.Student;
+import com.model.Student;
 
 public interface StudentService {
 

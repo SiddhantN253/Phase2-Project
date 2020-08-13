@@ -2,10 +2,10 @@ package com.learner.service.implementation;
 
 import java.util.List;
 
-import com.learner.dao.ClassesDAO;
-import com.learner.dao.implementation.ClassesDaoImplementation;
-import com.learner.model.Classes;
+import com.dao.ClassesDAO;
+import com.dao.implementation.ClassesDaoImplementation;
 import com.learner.service.ClassesService;
+import com.model.Classes;
 
 public class ClassesServiceImplementation implements ClassesService {
 

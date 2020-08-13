@@ -1,64 +1,62 @@
-package com.learner.dao.implementation;
-
-import java.util.List;
+package com.dao.implementation;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import com.learner.dao.StudentDAO;
-import com.learner.model.Student;
+import com.dao.TeacherDAO;
+import com.model.Teacher;
 
-public class StudentDaoImplementation implements StudentDAO {
+public class TeacherDaoImplementation implements TeacherDAO {
 	
 	private static SessionUtil sessionUtil = SessionUtil.getInstance();
 	
 	@Override
-	public Student createStudent(Student student) {
+	public Teacher createTeacher(Teacher teacher) {
 		Session session = sessionUtil.getSession();
 		Transaction transaction = session.beginTransaction();
-		session.save(student);
+		session.save(teacher);
 		transaction.commit();
 		session.close();
-		return student;
+		return teacher;
 	}
 
 	@Override
-	public Student getStudentById(int studentId) {
+	public Teacher getTeacherById(int teacherId) {
 		Session session = sessionUtil.getSession();
 		Transaction transaction = session.beginTransaction();
-		Student student = (Student) session.get(Student.class, studentId);
+		Teacher teacher = (Teacher) session.get(Teacher.class, teacherId);
 		transaction.commit();
 		session.close();
-		return student;
+		return teacher;
 	}
 
 	@Override
-	public List<Student> getAllStudents() {
+	public List<Teacher> getAllTeachers() {
 		Session session = sessionUtil.getSession();
 		Transaction transaction = session.beginTransaction();
-		List<Student> studentList = session.createQuery("from com.learner.model.Student").list();
+		List<Teacher> teacherList = session.createQuery("from com.learner.model.Teacher").list();
 		transaction.commit();
 		session.close();
-		return studentList;
+		return teacherList;
 	}
 
 	@Override
-	public Student updateStudent(Student student) {
+	public Teacher updateTeacher(Teacher teacher) {
 		Session session = sessionUtil.getSession();
 		Transaction transaction = session.beginTransaction();
-		session.update(student);
+		session.update(teacher);
 		transaction.commit();
 		session.close();
-		return student;
+		return teacher;
 	}
 
 	@Override
-	public void deleteStudent(int studentId) {
+	public void deleteTeacher(int teacherId) {
 		Session session = sessionUtil.getSession();
 		Transaction transaction = session.beginTransaction();
-		Student stu = new Student();
-		stu.setStudentId(studentId);
-		session.delete(stu);
+		Teacher tea = new Teacher();
+		tea.setTeacherId(teacherId);
+		session.delete(tea);
 		transaction.commit();
 		session.close();
 

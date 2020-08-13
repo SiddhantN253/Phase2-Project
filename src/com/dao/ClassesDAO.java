@@ -1,8 +1,8 @@
-package com.learner.dao;
+package com.dao;
 
-import java.util.List;
+import com.model.Classes;
 
-import com.learner.model.Classes;
+import antlr.collections.List;
 
 public interface ClassesDAO {
 

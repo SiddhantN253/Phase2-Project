@@ -1,11 +1,11 @@
-package com.learner.dao.implementation;
+package com.dao.implementation;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-import com.learner.dao.implementation.SessionUtil;
+import com.dao.implementation.SessionUtil;
 
 public class SessionUtil {
 	

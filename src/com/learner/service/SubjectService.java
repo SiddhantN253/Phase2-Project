@@ -2,7 +2,7 @@ package com.learner.service;
 
 import java.util.List;
 
-import com.learner.model.Subject;
+import com.model.Subject;
 
 public interface SubjectService {
 	

@@ -1,6 +1,4 @@
-package com.learner.controller;
-
-import java.util.List;
+package com.controller;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -12,9 +10,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.learner.model.Teacher;
 import com.learner.service.TeacherService;
 import com.learner.service.implementation.TeacherServiceImplementation;
+import com.model.Teacher;
 
 @Path("/teacher")
 public class TeacherController {
